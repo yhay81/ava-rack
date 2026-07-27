@@ -1,0 +1,18 @@
+{
+  "name": "Ava Rack",
+  "short_name": "Ava Rack",
+  "description": "所持アバターごとにBOOTHの衣装・髪型・小物検索を組み立てる。",
+  "lang": "ja",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2efe9",
+  "theme_color": "#243246",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

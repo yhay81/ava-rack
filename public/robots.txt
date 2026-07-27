@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ava-rack.yusuke8h.workers.dev/sitemap.xml
