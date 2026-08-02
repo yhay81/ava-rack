@@ -1,6 +1,6 @@
 export const PRODUCT = {
   name: "Ava Rack",
-  origin: "https://ava-rack.yusuke8h.workers.dev",
+  origin: "https://ava-rack.yhay81.com",
   description: "所持アバターごとにBOOTHの衣装・髪型・小物検索を組み立てる。",
   repository: "https://github.com/yhay81/ava-rack",
   dataRetentionDays: 35,

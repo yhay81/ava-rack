@@ -118,8 +118,8 @@ describe("product pages", () => {
     );
     const xml = await response.text();
     expect(response.headers.get("content-type")).toContain("application/xml");
-    expect(xml).toContain("https://ava-rack.yusuke8h.workers.dev/about");
-    expect(xml).toContain("https://ava-rack.yusuke8h.workers.dev/privacy");
+    expect(xml).toContain("https://ava-rack.yhay81.com/about");
+    expect(xml).toContain("https://ava-rack.yhay81.com/privacy");
   });
 });
 

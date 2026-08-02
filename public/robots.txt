@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ava-rack.yusuke8h.workers.dev/sitemap.xml
+Sitemap: https://ava-rack.yhay81.com/sitemap.xml
