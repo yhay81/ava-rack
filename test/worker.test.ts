@@ -147,6 +147,28 @@ describe("content-free telemetry", () => {
     expect(calls[0]?.values[0]).toMatch(/^[0-9a-f]{64}$/);
     expect(calls[0]?.values[0]).not.toBe(clientId);
     expect(calls[0]?.values[1]).toBe("booth_opened");
+    expect(calls[0]?.values[2]).toBe(0);
+  });
+
+  it("marks automated verification separately from product use", async () => {
+    const { environment, calls } = makeEnvironment();
+    const response = await app.request(
+      "https://ava-rack.yusuke8h.workers.dev/api/events",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Origin: "https://ava-rack.yusuke8h.workers.dev",
+          "X-Ava-Client": clientId,
+          "X-Ava-QA": "1",
+        },
+        body: JSON.stringify({ event: "booth_opened" }),
+      },
+      environment,
+    );
+
+    expect(response.status).toBe(202);
+    expect(calls[0]?.values[2]).toBe(1);
   });
 
   it("rejects avatar names and generated URLs as extra fields", async () => {

@@ -66,12 +66,15 @@ function getClientId() {
   return id;
 }
 
+const qaMode = navigator.webdriver || new URLSearchParams(location.search).has("qa");
+
 function record(event) {
   void fetch("/api/events", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "X-Ava-Client": getClientId(),
+      "X-Ava-QA": qaMode ? "1" : "0",
     },
     body: JSON.stringify({ event }),
     keepalive: true,
